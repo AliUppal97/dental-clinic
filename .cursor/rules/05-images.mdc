@@ -1,0 +1,25 @@
+---
+description: Image and media handling rules
+alwaysApply: true
+---
+
+- Never use stock photos of "generic" dental scenes and present them as this clinic's
+  real photos. If a real image isn't available, use a clearly neutral placeholder (a
+  soft gradient block, initials avatar, or icon) and leave a code comment
+  `// TODO: replace with real clinic photo` — never a photo of unrelated real people or
+  another real business passed off as this clinic's.
+- Never fabricate or display before/after treatment images without explicit
+  confirmation that real, consented patient images are being used for that exact slot.
+- All image paths must come from `site-data.json` via `siteData` — never hardcode an
+  image path directly in JSX.
+- All images use `next/image` with explicit `width`/`height` or `fill` + a sized parent,
+  a `sizes` prop for responsive loading, and specific, descriptive alt text.
+- Below-the-fold images (gallery, testimonials avatars) should lazy-load by default;
+  only the Hero image and above-the-fold logo should be prioritized
+  (`priority` prop) for fast LCP.
+- Compress/convert source images toward WebP where possible; flag any image over
+  ~300KB as needing optimization before shipping.
+- When building the pitch/demo version of the site with placeholder data, doctor photos
+  and gallery images should degrade gracefully (initials avatar, generic icon) rather
+  than showing broken image icons — this is the one case where "placeholder" imagery is
+  acceptable, and only when clearly generic/neutral, never a real person's photo.

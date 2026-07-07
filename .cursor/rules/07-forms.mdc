@@ -1,0 +1,23 @@
+---
+description: Form handling rules (contact / appointment request forms)
+alwaysApply: true
+---
+
+- All forms use `react-hook-form` with a `zod` schema for validation — no manual
+  `useState`-per-field form handling.
+- Validation errors must be specific and friendly (e.g. "Please enter a valid phone
+  number" not "Invalid input") and shown inline near the relevant field, not only in a
+  toast.
+- Required fields must be visually marked and enforced both client-side (zod) and in
+  the API route handler — never trust client-side validation alone.
+- On submit: disable the submit button and show a loading state to prevent double
+  submission; show a success or error toast (shadcn `sonner`/`toast`) reflecting the
+  actual API route result, not an optimistic assumption.
+- Any API route that "sends" the form (e.g. `/app/api/contact/route.ts`) must be clearly
+  commented if it's a stub that only logs the submission, with a `// TODO: connect to
+  real email service (Resend/SendGrid) or booking system before launch`.
+- Never store submitted patient contact data in the repo or in client-visible code —
+  submissions go through the API route only.
+- The service-selection field in an appointment form must be populated from
+  `siteData.servicesClinic` (and `servicesLab` if relevant) — never a separately
+  hardcoded list that can drift out of sync with the Services section.

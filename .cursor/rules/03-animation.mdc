@@ -1,0 +1,24 @@
+---
+description: Animation rules — Framer Motion usage and consistency
+alwaysApply: true
+---
+
+- All animation must use Framer Motion. Keep it subtle: fade/slide-up on scroll, gentle
+  hover states. No bouncy, cartoonish, elastic, or attention-grabbing motion — this is
+  a healthcare site, motion should feel calm and reassuring, not playful.
+- Default scroll-reveal pattern for section content: fade-up, ~24px translateY, 400-500ms
+  duration, ease-out. Reuse this exact pattern across sections for consistency unless a
+  section (Hero, Lab process timeline) has a deliberately distinct animation that was
+  intentionally designed to stand out.
+- Every scroll-triggered animation must use `viewport={{ once: true }}` (or equivalent)
+  so it fires once and never re-triggers on scroll-up/scroll-down flicker.
+- Stagger children animations (e.g. service cards, doctor cards) by index with a small
+  delay (100-150ms) rather than animating a whole grid in at once.
+- Wrap all animated components so they respect `prefers-reduced-motion: reduce` —
+  fall back to an instant, fully-visible appearance with no motion when that OS setting
+  is on. This applies to the WhatsApp button's pulse effect too.
+- Never use an animation that hides real content (text, CTAs, contact info) for more
+  than ~200ms — opacity/entrance animations must not delay perceived usability for
+  slow-loading users.
+- Page-level transitions (in the root layout) should be a simple fade-in, not a complex
+  route transition — keep load feel fast and light.

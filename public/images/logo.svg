@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Usama Dental Clinic and Laboratory logo">
+  <defs>
+    <linearGradient id="base-shadow" x1="32" y1="8" x2="32" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#065F56"/>
+      <stop offset="1" stop-color="#042F2A"/>
+    </linearGradient>
+    <linearGradient id="face-gradient" x1="20" y1="10" x2="48" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14B8A6"/>
+      <stop offset="0.45" stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#0D5C55"/>
+    </linearGradient>
+    <linearGradient id="tooth-gradient" x1="24" y1="16" x2="40" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#F0FDFA"/>
+      <stop offset="1" stop-color="#CCFBF1"/>
+    </linearGradient>
+    <linearGradient id="tooth-shadow" x1="32" y1="28" x2="32" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F766E" stop-opacity="0"/>
+      <stop offset="1" stop-color="#065F56" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="18" y1="12" x2="34" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accent-stroke" x1="24" y1="38" x2="40" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-10%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#042F2A" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Depth layer -->
+  <rect x="6" y="10" width="52" height="52" rx="14" fill="url(#base-shadow)"/>
+
+  <!-- Main 3D tile -->
+  <g filter="url(#soft-shadow)">
+    <rect x="4" y="6" width="52" height="52" rx="14" fill="url(#face-gradient)"/>
+    <rect x="4" y="6" width="52" height="52" rx="14" fill="url(#gloss)"/>
+    <rect x="4" y="6" width="52" height="26" rx="14" fill="url(#gloss)" opacity="0.45"/>
+  </g>
+
+  <!-- Tooth body -->
+  <path
+    d="M32 17c-6.4 0-11.5 4.2-11.5 10.2 0 3.8 1.9 7 4.8 9.2-.5 2.5-2.1 5-4.8 6.5 5.5-1.1 9.6-3.9 11.5-7.6 1.9 3.7 6 6.5 11.5 7.6-2.7-1.5-4.3-4-4.8-6.5 2.9-2.2 4.8-5.4 4.8-9.2C43.5 21.2 38.4 17 32 17Z"
+    fill="url(#tooth-gradient)"
+  />
+  <path
+    d="M32 17c-6.4 0-11.5 4.2-11.5 10.2 0 3.8 1.9 7 4.8 9.2-.5 2.5-2.1 5-4.8 6.5 5.5-1.1 9.6-3.9 11.5-7.6 1.9 3.7 6 6.5 11.5 7.6-2.7-1.5-4.3-4-4.8-6.5 2.9-2.2 4.8-5.4 4.8-9.2C43.5 21.2 38.4 17 32 17Z"
+    fill="url(#tooth-shadow)"
+  />
+
+  <!-- Smile arc with 3D accent -->
+  <path
+    d="M25.5 39.5c1.6 2.8 4.2 4.3 6.5 4.3s4.9-1.5 6.5-4.3"
+    stroke="url(#accent-stroke)"
+    stroke-width="2.75"
+    stroke-linecap="round"
+  />
+  <path
+    d="M25.5 39.5c1.6 2.8 4.2 4.3 6.5 4.3s4.9-1.5 6.5-4.3"
+    stroke="#FFFFFF"
+    stroke-width="1"
+    stroke-linecap="round"
+    opacity="0.35"
+    transform="translate(0 -1)"
+  />
+
+  <!-- Highlight edge -->
+  <path
+    d="M14 18c6-5 30-5 36 0"
+    stroke="#FFFFFF"
+    stroke-width="1.25"
+    stroke-linecap="round"
+    opacity="0.28"
+  />
+</svg>

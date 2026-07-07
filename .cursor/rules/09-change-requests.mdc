@@ -1,0 +1,22 @@
+---
+description: How to behave when asked to modify or extend an already-built site
+alwaysApply: true
+---
+
+- When asked to modify an existing section, only touch the files relevant to that
+  section — do not refactor unrelated components as a side effect of an unrelated request.
+- Before declaring a change complete, mentally re-check it against the relevant rule
+  files above (design, responsive, animation, accessibility, images, whatsapp, forms,
+  seo) and note in your response what you'd manually verify (e.g. "test this at 375px
+  and with prefers-reduced-motion on").
+- If a requested change conflicts with an accessibility rule, a content-accuracy rule,
+  or the single-source-of-truth rule (e.g. "just hardcode this number for now"), flag
+  the conflict and explain why, rather than silently overriding the rule.
+- When adding a brand-new field to the site (e.g. an insurance-partners logo strip),
+  add it to `site-data.json` and `site-data-types.ts` first, then build the component
+  to consume it — never hardcode the new content directly to save a step.
+- When onboarding a new client onto this same codebase, the only files that should
+  change are `/content/site-data.json` and the contents of `/public/images` — if a
+  change request seems to require touching component code just to rebrand for a new
+  client, that's a sign something was hardcoded earlier and should be fixed at the
+  source instead.

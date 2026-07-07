@@ -1,0 +1,26 @@
+---
+description: Accessibility rules — WCAG AA minimum, non-negotiable for a medical site
+alwaysApply: true
+---
+
+- Every interactive element (buttons, links, form fields, accordion triggers, carousel
+  controls, the WhatsApp button) must be reachable and operable via keyboard alone, in
+  a logical tab order, and must show a visible focus ring (never `outline: none` without
+  a replacement focus style).
+- All images require descriptive, specific alt text tied to the medical context (e.g.
+  "Dental implant procedure room with overhead light," not "dentist" or "" ).
+  Purely decorative background shapes/blobs get `alt=""` or `aria-hidden="true"`.
+- All form fields must have an associated, visible `<label>` — placeholder text alone is
+  never an acceptable substitute for a label.
+- All icon-only buttons/links (social icons, close buttons, carousel arrows) must have a
+  descriptive `aria-label`.
+- Maintain WCAG AA color contrast: 4.5:1 for normal text, 3:1 for large text (18px+ or
+  14px+ bold), checked against the actual theme background, not assumed.
+- Use correct landmark elements and heading hierarchy: one `<h1>` per page, `<nav>` for
+  navigation, `<footer>` for the footer, `<main>` wrapping page content — don't skip
+  heading levels (no jumping from `<h2>` to `<h4>`).
+- Modals/dialogs (lightbox, mobile nav drawer) must trap focus while open and return
+  focus to the triggering element on close, and must be dismissible via `Escape`.
+- Any content-hiding entrance animation must not prevent screen readers or keyboard
+  users from reaching the content immediately — don't rely on animation-driven visibility
+  toggles that also block assistive tech.

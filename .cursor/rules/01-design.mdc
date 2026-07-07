@@ -1,0 +1,24 @@
+---
+description: Design system consistency rules
+alwaysApply: true
+---
+
+- Never use arbitrary hex values in components — always reference the Tailwind theme
+  tokens defined in `tailwind.config.ts` (which themselves read from
+  `site-data.json`'s `theme` object). Search for raw hex codes in components before
+  considering a phase complete; there should be none.
+- Maintain consistent spacing using Tailwind's spacing scale only — no arbitrary pixel
+  values (e.g. `mt-[13px]`) except for fine icon alignment where the scale genuinely
+  doesn't fit.
+- Border radius must be consistent site-wide: default to `rounded-xl` or `rounded-2xl`
+  for cards and containers, `rounded-full` for pills, avatars, and icon buttons. Pick
+  one system in Phase 2 and never deviate without updating the rule.
+- Shadows must be soft and minimal (`shadow-sm` / `shadow-md`) — never heavy, dark, or
+  multi-layered drop shadows. This is a medical site; visual weight should feel calm.
+- Typography: body text uses the primary sans font, headings use the distinct heading
+  font set up in Phase 2. Don't introduce a third font family anywhere.
+- Background should be a warm off-white (per `theme.backgroundColor`), never stark
+  `#FFFFFF` — a pure white background reads as cold/sterile on a healthcare site.
+- Every new component should visually match the density and spacing of existing
+  sections — check an existing section (e.g. Services) before styling a new one from
+  scratch, don't reinvent card padding/gaps each time.

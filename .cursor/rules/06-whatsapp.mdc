@@ -1,0 +1,19 @@
+---
+description: WhatsApp floating chat button rules
+alwaysApply: true
+---
+
+- The WhatsApp number comes from `siteData.clinic.whatsapp` — never hardcode it.
+- Link format: `https://wa.me/{{whatsapp}}?text=` followed by a URL-encoded, friendly
+  pre-filled message (e.g. "Hi, I'd like to book an appointment").
+- The button is fixed position, bottom-right, visible on all pages and scroll positions,
+  with a z-index high enough to stay above content but never covering the mobile nav,
+  the footer's CTA, or a form's submit button — verify this specifically at 375px width.
+- Use the recognizable WhatsApp glyph/icon in WhatsApp's brand green, circular button.
+- Any pulse/glow animation must be slow and low-opacity, and must be wrapped in a
+  `prefers-reduced-motion` check that disables it entirely for users with that setting on.
+- Never trigger the WhatsApp link automatically without a user click/tap.
+- An optional first-visit tooltip ("Chat with us!") may appear once per session
+  (tracked via `sessionStorage`, not `localStorage` or cookies) and must be dismissible.
+- The button and its tooltip must be keyboard-focusable and have an `aria-label`
+  describing the action (e.g. "Chat with us on WhatsApp").

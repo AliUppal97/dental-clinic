@@ -1,0 +1,31 @@
+---
+description: Dev server safety — prevents broken localhost after agent edits
+alwaysApply: true
+---
+
+# Dev server vs production build (critical)
+
+The local app runs at `http://localhost:3001` via `npm run dev`.
+
+- **Dev output** goes to `.next-dev/` (`NEXT_DIST_DIR=.next-dev` in the dev script).
+- **Production build** output goes to `.next/` (default `distDir`).
+
+These directories must never be shared. Running `npm run build` while `npm run dev` is
+active used to corrupt the dev cache and serve broken HTML (missing CSS/JS chunks, errors
+like `Cannot find module './266.js'`).
+
+# Agent verification workflow
+
+- After code changes, run **`npm run verify`** (TypeScript + ESLint) — **not** `npm run build`
+  — unless the user explicitly asks for a production build or dev is confirmed stopped.
+- **Never** run `npm run build` in parallel with a running dev server unless you first stop
+  dev or accept that they are now isolated (separate dist dirs).
+- If the user reports a broken localhost page (unstyled HTML, 404 on `/_next/static/*`):
+  1. Stop any dev server on port 3001
+  2. Run `npm run dev:reset` (clears `.next` + `.next-dev`, restarts dev)
+  3. Hard-refresh the browser (Cmd+Shift+R)
+
+# Starting / resetting dev
+
+- Start: `npm run dev`
+- Clean restart after cache corruption: `npm run dev:reset`

@@ -1,0 +1,20 @@
+---
+description: SEO and structured data rules
+alwaysApply: true
+---
+
+- Use the Next.js Metadata API (`generateMetadata` / the `metadata` export) for title,
+  description, Open Graph, and Twitter card tags — never manually inject `<head>` tags.
+- All metadata content (clinic name, description, address) must pull from `siteData`,
+  not be re-typed as separate hardcoded strings.
+- Include `LocalBusiness`/`Dentist` JSON-LD structured data in the root layout, built
+  from `siteData` (name, address, phone, hours, geo coordinates if available). Include
+  `FAQPage` JSON-LD generated from `siteData.faqs` on the FAQ section.
+- Generate `sitemap.xml` and `robots.txt` using Next.js's `app/sitemap.ts` and
+  `app/robots.ts` conventions — not static files.
+- Every page/section needs exactly one `<h1>`; don't duplicate `<h1>` across sections.
+- Verify metadata renders server-side (view page source, not just dev tools' rendered
+  DOM) before considering an SEO phase complete.
+- Favicon and social share preview image (Open Graph image) must use the clinic's real
+  logo/branding, sourced via `siteData.clinic.logoPath`, once available — not a generic
+  Next.js/Vercel default icon.

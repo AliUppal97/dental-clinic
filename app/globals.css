@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./theme-vars.css";
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  :root {
+    --site-header-height: 4.5rem;
+  }
+
+  html {
+    scroll-padding-top: var(--site-header-height);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  @media (scripting: none) {
+    body {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  body {
+    @apply bg-background text-base text-foreground antialiased;
+  }
+}

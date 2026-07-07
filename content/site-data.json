@@ -1,0 +1,217 @@
+{
+  "clinic": {
+    "name": "Usama Dental Clinic & Laboratory",
+    "labName": "Usama Dental Laboratory",
+    "tagline": "Precision Dentistry. Crafted In-House.",
+    "description": "Usama Dental Clinic & Laboratory brings together expert clinical care and a fully integrated dental lab under one roof — so your treatment is faster, more precise, and tailored to you from scan to final smile.",
+    "logoPath": "/images/logo.svg",
+    "phone": "+92 42 3512 3456",
+    "whatsapp": "923001234567",
+    "email": "info@usamadental.pk",
+    "address": {
+      "line1": "Suite 4, Al-Hafeez Heights, MM Alam Road",
+      "city": "Gulberg III, Lahore",
+      "postalCode": "54660",
+      "country": "PK",
+      "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13603.0!2d74.3436!3d31.5203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMxJzEzLjEiTiA3NMKwMjAnMzcuMCJF!5e0!3m2!1sen!2s!4v0",
+      "googleMapsDirectionsUrl": "https://maps.google.com/?q=Al-Hafeez+Heights+MM+Alam+Road+Gulberg+III+Lahore"
+    },
+    "geo": {
+      "latitude": 31.5203,
+      "longitude": 74.3436
+    },
+    "hours": [
+      { "day": "Monday - Saturday", "time": "10:00 AM - 8:00 PM" },
+      { "day": "Sunday", "time": "Closed" }
+    ],
+    "socials": {
+      "instagram": "https://instagram.com/usamadentalclinic",
+      "facebook": "https://facebook.com/usamadentalclinic",
+      "linkedin": "https://linkedin.com/company/usamadentalclinic",
+      "googleBusinessProfile": "https://g.page/usamadentalclinic"
+    },
+    "stats": [
+      { "label": "Years of Experience", "value": "12+" },
+      { "label": "Happy Patients", "value": "8,000+" },
+      { "label": "Procedures Completed", "value": "15,000+" },
+      { "label": "Patient Satisfaction", "value": "98%" }
+    ],
+    "heroImage": {
+      "src": "/images/gallery/team-photo.jpg",
+      "alt": "Dental professional reviewing patient imaging in a modern clinic"
+    }
+  },
+  "theme": {
+    "primaryColor": "#0F766E",
+    "accentColor": "#F97316",
+    "backgroundColor": "#FAF9F6"
+  },
+  "sections": {
+    "services": {
+      "eyebrow": "Our Services",
+      "heading": "Complete Care for Every Smile",
+      "intro": "From routine preventive visits to advanced restorative treatments, we provide comprehensive dental care tailored to your comfort and goals."
+    },
+    "about": {
+      "eyebrow": "About Us",
+      "heading": "Care You Can Trust",
+      "teamHeading": "Meet the Team",
+      "whyChooseUsHeading": "Why Choose Us"
+    },
+    "laboratory": {
+      "eyebrow": "In-House Laboratory",
+      "heading": "Precision Prosthetics & Digital Dentistry",
+      "intro": "Our on-site dental laboratory means faster turnaround, tighter quality control, and restorations designed alongside your clinical team — not shipped to a third party.",
+      "processHeading": "From Scan to Seat",
+      "photosHeading": "Inside the Lab"
+    },
+    "gallery": {
+      "eyebrow": "Our Clinic",
+      "heading": "See Our Space",
+      "intro": "Take a look inside our modern clinic — from welcoming reception areas to state-of-the-art treatment rooms and our in-house laboratory.",
+      "beforeAfterHeading": "Treatment Results"
+    },
+    "testimonials": {
+      "eyebrow": "Patient Reviews",
+      "heading": "What Our Patients Say",
+      "intro": "Real feedback from patients who trust us with their smiles and their families."
+    },
+    "faqs": {
+      "eyebrow": "FAQs",
+      "heading": "Frequently Asked Questions",
+      "intro": "Quick answers to common questions about appointments, treatments, payments, and our in-house lab."
+    },
+    "contact": {
+      "eyebrow": "Get in Touch",
+      "heading": "Book an Appointment",
+      "intro": "Whether you prefer a quick call, WhatsApp message, or the form below — choose whatever works best for you.",
+      "formHeading": "Request an Appointment",
+      "formIntro": "Tell us a little about your visit and we will confirm your preferred date and time.",
+      "responseNote": "We typically respond within one business day.",
+      "trustPoints": [
+        "Flexible scheduling, Monday through Saturday",
+        "Same-day callbacks for urgent dental concerns",
+        "Clear confirmation before anything is booked"
+      ]
+    }
+  },
+  "whyChooseUs": [
+    {
+      "id": "modern-equipment",
+      "title": "Modern Equipment",
+      "description": "Digital X-rays, intraoral scanners, and rotary endodontics for faster, more accurate care.",
+      "icon": "Cpu"
+    },
+    {
+      "id": "painless-procedures",
+      "title": "Painless Procedures",
+      "description": "Gentle techniques and effective anesthesia so you stay comfortable throughout every visit.",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "transparent-pricing",
+      "title": "Transparent Pricing",
+      "description": "Clear treatment plans and upfront cost estimates — no surprises when you check out.",
+      "icon": "CreditCard"
+    },
+    {
+      "id": "flexible-hours",
+      "title": "Flexible Hours",
+      "description": "Open six days a week with evening appointments to fit busy work and family schedules.",
+      "icon": "Clock"
+    }
+  ],
+  "servicesClinic": [
+    { "id": "general-dentistry", "name": "General Dentistry", "description": "Routine checkups, cleanings, fillings, and preventive care to keep your smile healthy year-round.", "icon": "Stethoscope" },
+    { "id": "cosmetic-dentistry", "name": "Cosmetic Dentistry", "description": "Teeth whitening, bonding, and smile makeovers designed around your facial features.", "icon": "Sparkles" },
+    { "id": "orthodontics", "name": "Orthodontics", "description": "Braces and clear aligners for children and adults, with flexible payment plans.", "icon": "Smile" },
+    { "id": "root-canal", "name": "Root Canal Treatment", "description": "Painless, single-visit root canal therapy using modern rotary technology.", "icon": "Activity" },
+    { "id": "dental-implants", "name": "Dental Implants", "description": "Permanent tooth replacement solutions with a natural look and feel.", "icon": "Shield" },
+    { "id": "pediatric-dentistry", "name": "Pediatric Dentistry", "description": "Gentle, kid-friendly dental care in a calm, welcoming environment.", "icon": "Heart" }
+  ],
+  "labProcess": [
+    { "id": "scan", "title": "Impression or Scan", "description": "Digital intraoral scan or traditional impression captured chairside and transferred to the lab.", "icon": "ScanLine" },
+    { "id": "design", "title": "CAD Design", "description": "Restoration designed in CAD software for precise fit, occlusion, and natural aesthetics.", "icon": "Layers" },
+    { "id": "fabrication", "title": "Fabrication", "description": "Crowns, bridges, or appliances milled or hand-crafted by our in-house technicians.", "icon": "Cog" },
+    { "id": "quality", "title": "Quality Check", "description": "Every case inspected for fit, shade, and occlusion before it leaves the bench.", "icon": "Shield" },
+    { "id": "delivery", "title": "Delivery", "description": "Ready for chairside placement — most cases completed within 3–5 working days.", "icon": "Package" }
+  ],
+  "labPhotos": [
+    { "src": "/images/gallery/lab-workbench.jpg", "alt": "In-house laboratory with precision equipment and tools" },
+    { "src": "/images/gallery/lab-cad-imaging.jpg", "alt": "Technician reviewing 3D dental scan reconstructions for CAD design" },
+    { "src": "/images/gallery/lab-shade-matching.jpg", "alt": "Matching crown and veneer shade using a professional VITA shade guide" }
+  ],
+  "referringDentists": {
+    "enabled": true,
+    "heading": "For Referring Dentists",
+    "description": "We accept outsourced lab cases from referring dental practices. Contact us directly for turnaround times, pricing, and case submission details."
+  },
+  "servicesLab": [
+    { "id": "crown-bridge", "name": "Crown & Bridge", "description": "Precision-fabricated crowns and bridges using high-strength ceramics.", "icon": "Cog" },
+    { "id": "dentures", "name": "Dentures", "description": "Custom complete and partial dentures fitted for comfort and natural function.", "icon": "Grid" },
+    { "id": "veneers", "name": "Veneers", "description": "Thin, custom-shaded porcelain veneers for a flawless smile.", "icon": "Layers" },
+    { "id": "implant-restorations", "name": "Implant Restorations", "description": "Lab-fabricated implant crowns and abutments built to exact digital scans.", "icon": "Settings" },
+    { "id": "orthodontic-appliances", "name": "Orthodontic Appliances", "description": "Retainers, night guards, and custom orthodontic devices made in-house.", "icon": "Wrench" },
+    { "id": "digital-scanning", "name": "Digital Scanning & CAD-CAM", "description": "Intraoral scanning and CAD-CAM design for faster, more accurate lab turnaround.", "icon": "ScanLine" }
+  ],
+  "doctors": [
+    {
+      "id": "dr-1",
+      "name": "Dr. Ayesha Malik",
+      "title": "BDS, RDS",
+      "specialty": "General & Cosmetic Dentistry",
+      "bio": "Dr. Ayesha has 12 years of experience in general and cosmetic dentistry, with a special focus on smile makeovers and painless treatment techniques.",
+      "photoPath": "/images/doctors/dr-1.jpg"
+    },
+    {
+      "id": "dr-2",
+      "name": "Dr. Bilal Ahmed",
+      "title": "BDS, MSc Orthodontics",
+      "specialty": "Orthodontics",
+      "bio": "Dr. Bilal specializes in braces and clear aligner therapy for both children and adults, with a patient-first, low-pressure approach.",
+      "photoPath": "/images/doctors/dr-2.jpg"
+    },
+    {
+      "id": "dr-3",
+      "name": "Dr. Hina Farooq",
+      "title": "BDS, Implantology Certified",
+      "specialty": "Dental Implants & Oral Surgery",
+      "bio": "Dr. Hina has placed over 1,000 implants and is known for her precision and calm chairside manner.",
+      "photoPath": "/images/doctors/dr-3.jpg"
+    }
+  ],
+  "gallery": [
+    { "src": "/images/gallery/clinic-reception.jpg", "alt": "Modern dental clinic with multiple treatment stations" },
+    { "src": "/images/gallery/treatment-room.jpg", "alt": "Modern dental operatory with patient chair and equipment" },
+    { "src": "/images/gallery/lab-workbench.jpg", "alt": "In-house laboratory with precision equipment and tools" },
+    { "src": "/images/gallery/equipment-1.jpg", "alt": "Dentist reviewing 3D dental imaging scans on a light box" },
+    { "src": "/images/gallery/team-photo.jpg", "alt": "Dental professional reviewing patient imaging in clinic" },
+    { "src": "/images/gallery/kids-area.jpg", "alt": "Gentle pediatric dental care with a smiling young patient" }
+  ],
+  "beforeAfterConsent": false,
+  "beforeAfter": [
+    { "beforeSrc": "/images/before-after/case-1-before.jpg", "afterSrc": "/images/before-after/case-1-after.jpg", "caption": "Smile makeover with porcelain veneers" },
+    { "beforeSrc": "/images/before-after/case-2-before.jpg", "afterSrc": "/images/before-after/case-2-after.jpg", "caption": "Full mouth implant restoration" }
+  ],
+  "testimonials": [
+    { "name": "Sana K.", "rating": 5, "quote": "Best dental experience I've had in Lahore. The staff explained every step and I felt zero anxiety." },
+    { "name": "Usman T.", "rating": 5, "quote": "Got my implants done here — professional, clean, and the results look completely natural." },
+    { "name": "Mehwish R.", "rating": 4, "quote": "Very organized clinic, appointments are always on time. My kids actually enjoy their checkups now." },
+    { "name": "Ahmed S.", "rating": 5, "quote": "The in-house lab meant my crown was ready in days, not weeks. Excellent quality." }
+  ],
+  "faqs": [
+    { "category": "Appointments", "question": "Do I need an appointment or can I walk in?", "answer": "We recommend booking an appointment via call or WhatsApp to minimize wait time, though walk-ins are accommodated based on availability." },
+    { "category": "Appointments", "question": "What are your working hours?", "answer": "We're open Monday to Saturday, 10:00 AM to 8:00 PM. We're closed on Sundays." },
+    { "category": "Treatments", "question": "Is teeth whitening safe?", "answer": "Yes, when done professionally under supervision. We use dentist-grade whitening agents that are safe for enamel with proper aftercare guidance." },
+    { "category": "Treatments", "question": "How painful is a root canal treatment?", "answer": "With modern anesthesia and rotary technology, most patients report little to no pain during the procedure, and mild discomfort for a day or two after." },
+    { "category": "Treatments", "question": "How long do dental implants last?", "answer": "With proper care, dental implants can last 15-20 years or even a lifetime." },
+    { "category": "Payments & Insurance", "question": "Do you accept health insurance?", "answer": "We accept select insurance panels. Please contact our front desk with your insurance provider details to confirm coverage." },
+    { "category": "Payments & Insurance", "question": "Do you offer installment plans?", "answer": "Yes, we offer flexible installment plans for orthodontic and implant treatments." },
+    { "category": "Lab & Prosthetics", "question": "How long does it take to get a crown or bridge made?", "answer": "Since we have an in-house lab, most crowns and bridges are ready within 3-5 working days." },
+    { "category": "Lab & Prosthetics", "question": "Do you accept lab work from other dental clinics?", "answer": "Yes, we accept outsourced lab cases from referring dentists. Please contact us directly for turnaround times and pricing." }
+  ],
+  "certifications": [
+    { "name": "Pakistan Medical & Dental Council Registered", "iconPath": "/images/certs/pmdc.svg" },
+    { "name": "ISO 9001 Certified Lab Processes", "iconPath": "/images/certs/iso.svg" }
+  ]
+}

@@ -1,0 +1,24 @@
+---
+description: Responsiveness rules — applies to every component, non-negotiable
+alwaysApply: true
+---
+
+- Build and mentally verify every new component at 375px width FIRST, then confirm it
+  scales cleanly at 640px, 768px, 1024px, 1280px, and 1536px.
+- Use Tailwind responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`) for layout changes —
+  never write separate mobile/desktop component variants or duplicate JSX blocks.
+- Grids default to `grid-cols-1`, expanding with `md:grid-cols-2` / `lg:grid-cols-3`
+  rather than a fixed column count that doesn't reflow.
+- Headings and large text use a responsive type scale (e.g. `text-3xl md:text-5xl`) so
+  nothing overflows its container or looks oversized on a small screen.
+- Never use fixed pixel widths on wrapping containers (`w-[800px]`) — use `max-w-*`
+  with `w-full` and responsive padding (`px-4 md:px-8`) instead.
+- Any horizontal scroll on a section that isn't an intentional carousel/scroll-snap
+  component is a bug and must be fixed before the section is considered done.
+- All touch targets (buttons, nav links, accordion triggers, the WhatsApp button) must
+  be at least 44x44px on mobile viewports.
+- Images must use responsive `sizes` props with `next/image` so mobile devices don't
+  download desktop-resolution assets.
+- Test the mobile nav drawer, any carousel, and any drag/swipe interaction (gallery
+  lightbox, before/after slider) specifically on touch — hover-only interactions are
+  not acceptable as the sole way to trigger something on mobile.

@@ -1,0 +1,49 @@
+---
+description: Global project rules for the dental clinic & lab website — always applies
+alwaysApply: true
+---
+
+# Project context
+This is a Next.js 14 (App Router) + TypeScript + Tailwind CSS website for a dental clinic
+and its in-house dental laboratory, built by an agency/freelancer to be resold as a
+reusable template across multiple clinic clients.
+
+# Tone & content
+- This is a medical/dental website. Tone must be professional, clean, calm, and
+  trustworthy — never salesy, gimmicky, or overly casual.
+- Never invent clinic details, doctor names, statistics, testimonials, or reviews that
+  aren't present in `/content/site-data.json`. If an array in site-data.json is empty,
+  render a graceful empty/hidden state — do not fabricate entries to "fill space."
+- Never claim medical outcomes, guarantees, or make health claims not explicitly
+  provided in the source content (e.g. don't write "guaranteed pain-free" unless that
+  exact claim exists in site-data.json).
+
+# Stack rules
+- Always use TypeScript, never plain JS. No `any` types unless absolutely unavoidable
+  (and then with a comment explaining why).
+- Use Tailwind CSS utility classes for styling; do not write standalone CSS files
+  unless Tailwind genuinely cannot achieve the effect (e.g. complex keyframe animation).
+- Use shadcn/ui components as the base for buttons, cards, accordions, dialogs, toasts,
+  and forms — do not hand-roll these primitives from scratch.
+- Use `next/image` for all images and `next/font` for all fonts — never raw `<img>` tags
+  or external font `<link>` tags.
+
+# Single source of truth (critical)
+- ALL content — names, phone numbers, addresses, hours, services, doctor bios, FAQs,
+  testimonials, theme colors, image paths — must be imported from the typed `siteData`
+  object exported by `/lib/get-site-data.ts`, which reads `/content/site-data.json`.
+- Never hardcode a phone number, name, address, color hex value, or any client-specific
+  string directly inside a component file.
+- If a component needs a field that doesn't exist in site-data.json yet, add the field
+  to the JSON and to `/lib/site-data-types.ts` first, then consume it through `siteData`.
+  Do not inline it as a one-off "just this once."
+- This rule exists so the entire site can be reused for a new client by editing one file
+  and swapping images — never break that by scattering content into JSX.
+
+# General code quality
+- Prefer server components by default; only add `"use client"` when a component needs
+  interactivity, state, or browser APIs (animations, forms, carousels, accordions).
+- Keep components focused — one section per file inside `/components/sections`, shared
+  UI (Navbar, Footer, WhatsApp button) inside `/components/shared`.
+- Never commit real patient data, PII, or API keys into the repo. Secrets go in
+  `.env.local` (gitignored) with a matching `.env.example` documenting the required keys.
